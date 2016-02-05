@@ -1,0 +1,29 @@
+{
+  "name": "theobald.ecs.micro",
+  "dependencies": {},
+  "devDependencies": {},
+  "description": "Theobald.Ecs Micro JS Client-Library, Companion ECS",
+  "homepage": "http://theobald-software.com/en/erpconnect-services-productinfo.html",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "keywords": [
+    "ECS",
+    "ERPConnect",
+    "ERPConnectServices",
+    "SAP",
+    "Theobald",
+    "Sharepoint",
+    "Microsoft"
+  ],
+  "license": "Commercial license",
+  "main": [
+    "dist/theobald.ecs.micro.js"
+  ],
+  "source": "https://github.com/theobald-software/theobald.ecs.micro.git",
+  "authors": [
+    "Theobald Software GmbH <info@theobald-software.com> (http://theobald-software.com)"
+  ],
+  "version": "5.0.0"
+}
