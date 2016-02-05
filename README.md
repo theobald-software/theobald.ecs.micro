@@ -1,18 +1,17 @@
 ## Getting started
 
-- Install with [Bower](http://bower.io): `bower install theobald.ecs`.
+- Install with [Bower](http://bower.io): `bower install theobald.ecs.micro`.
 
 ```
-theobald.ecs/
+theobald.ecs.micro/
 └── dist/
-    ├── js/
-    ├── theobald.ecs.js
-    └── theobald.ecs.min.js
+    ├── theobald.ecs.micro.js
+    └── theobald.ecs.micro.min.js
 ```
 
 ## Documentation
 
-[Quick usage guide](https://static.theobald-software.com/theobald.ecs)
+[Quick usage guide](https://static.theobald-software.com/theobald.ecs.micro)
 
 [Documentation ERPConnectServices](http://help.theobald-software.com/ERPConnect-Services-EN/)
 
