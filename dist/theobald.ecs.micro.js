@@ -1328,8 +1328,8 @@ define('theobald.ecs',['theobald.ajax', 'theobald.util'], function(_ajax, _util)
 
     p.className = ns;
 
-    p.version = '5.0.0';
-    p.timeStamp = 'Thu Feb 04 2016 14:48:45 GMT+0100 (W. Europe Standard Time)';
+    p.version = '5.1.0';
+    p.timeStamp = 'Fri Feb 05 2016 19:43:25 GMT+0100 (W. Europe Standard Time)';
     p.copyright = 'Theobald Software GmbH.';
 
     p.defaultConfig = {
@@ -1951,7 +1951,13 @@ define('theobald.ecs',['theobald.ajax', 'theobald.util'], function(_ajax, _util)
             done = function(doneParameters) {
                 self.trace(self.format('ecs.{0}.done', activeAction));
                 // already unwrapped
-                var finalResult = doneParameters && doneParameters.rows || doneParameters;
+                var finalResult;
+                if (updatedParameters.withMetadata) {
+                    finalResult = doneParameters;
+                } else {
+                    finalResult = doneParameters && doneParameters.rows || doneParameters;
+                }
+
                 // execute data specific convertion
                 finalResult = self.preprocessResult(parameters.preprocessResult, finalResult);
 
@@ -3089,7 +3095,8 @@ define('theobald.ecs',['theobald.ajax', 'theobald.util'], function(_ajax, _util)
         // overrides
         this._extend(ajaxOptions, options.ajax);
 
-        var d = t.$.ajax(ajaxOptions).done(doneHandler).fail(failHandler);
+        var d = self.ajax(ajaxOptions).done(doneHandler).fail(failHandler);
+
         if (options.always) {
             d.always(options.always);
         }
